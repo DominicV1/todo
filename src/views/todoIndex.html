@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-y">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo | Dominic</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<div class="hPart"></div>
+<div class="header" id="navbar">
+    <a href="#aTodo">Active | </a>
+    {% if loggedIn == true %}
+    <a href="../user/logout">Logout</a>
+    {% else %}
+    <a href="../user/login">Login</a>
+    {% endif %}
+    <a href="#fTodo"> | Finished</a>
+</div>
+
+<div class="container" id="container">
+
+    <div class="newTodo">
+        <h1>Add Todo's:</h1>
+
+        <div id="newTodo" onclick="addTodo(this)"
+             onblur="newTodo(this)">
+        </div>
+    </div>
+
+    <br>
+
+    <h1>Active Todo's:</h1><a href="#" class="top"># </a>
+
+    <div class="drag-sort-enable aTodo">
+
+        {% for row in aTodo %}
+        <div class="con">
+            <div class="check"><input type="checkbox" onclick="finishTodo({{row.id}})"></div>
+            <div id="aTodo" onclick="editTodo(this)"
+                 onblur="updateTodo(this, {{row.id}})">
+                {{row.title}}
+            </div>
+            <div class="icon bx bxs-arrow-from-bottom" onclick="updateOrder({{row.id}}, {{row.struc}})"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <br>
+
+    <h1>Finished Todo's:</h1><a href="#" class="top" id="fTop"># </a>
+
+    <div class="fTodo">
+
+        {% for row in fTodo %}
+        <div class="conF">
+            <div class="check">
+                <input type="checkbox" onclick="deleteTodo({{row.id}})">
+            </div>
+            <div id="fTodo">{{row.title}}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+
+<script src="/src/updateTodo.js"></script>
+<script src="/src/updateOrder.js"></script>
+</body>
+</html>

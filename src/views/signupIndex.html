@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up Page</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<div class="hPart">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+</div>
+
+<div class="header">
+    {% if loggedIn == true %}
+    {% else %}
+    <a href="">Register Page</a>
+    {% endif %}
+</div>
+
+<div class="loginContainer">
+
+    <form method="POST" class="login">
+        {% if invalidSignup == true %}
+        <h3 class="invalidSign">Niet alle gegevens zijn ingevuld!</h3>
+        {% endif %}
+        {% if uNameEx == true %}
+        <h3 class="invalidSign">Gebruikersnaam is al in gebruik!</h3>
+        {% endif %}
+        <h1 class="todo-title">Register:</h1>
+        <input type="text" name="user_n" placeholder="Username">
+        <input type="password" name="pass_w" placeholder="Password">
+        <button id="registerP">Register</button>
+        <a href="../user/login" id="loginB">Login</a>
+    </form>
+</div>
+
+</body>
+</html>
