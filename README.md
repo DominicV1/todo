@@ -78,7 +78,7 @@ Distributed under the MIT License.
 <!-- CONTACT -->
 ## Contact
 
-Dominic - [@DominicVos4](https://twitter.com/DominicVos4) - DominicLDC@outlook.com
+Dominic - [@cinimoD_Dev](https://twitter.com/cinimoD_Dev) - DominicLDC@outlook.com
 
 Project Link: [https://github.com/DominicV1/bit-todo](https://github.com/DominicV1/todo)
 
