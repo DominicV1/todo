@@ -48,19 +48,19 @@ See here my first project. In the future I will be adding more features and make
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo:
    ```sh
    git clone https://github.com/DominicV1/todo.git
    ```
-2. Install NPM packages
+2. Install NPM packages:
    ```sh
    npm install
    ```
-4. Insert into your database `insert.sql`
+4. Insert into your database `insert.sql`:
    ```
    Open the inser.sql file and execute it to your databse
    ```
-5. Create an account at the: /user/signup page.
+5. Create an account at the: /user/signup page:
    ```
    Create a user and login.
    ```
