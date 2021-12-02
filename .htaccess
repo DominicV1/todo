@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !=/src/index.php
+RewriteCond %{REQUEST_URI} !.(css|gif|php|jpg|js)$
+RewriteRule .* /src/index.php
+</IfModule>
